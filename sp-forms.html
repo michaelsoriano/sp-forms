@@ -1,0 +1,76 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></link>
+<script src="/temp/Shared%20Documents/sp-forms.js"></script>
+<link rel="stylesheet" href="/temp/Shared%20Documents/sp-forms.css"></link>
+<h3>Form Demo</h3>
+<div data-list-name="sp-forms-form2" id="form1">   
+        <div class="success-message hidden">
+            Thank you for your submission.
+        </div>
+        <div class="form-group">
+            <label for="countries">Title<sup>*</sup></label>
+            <input name="Title" class="form-control input-sm" placeholder="Enter here..." data-rules="required"/>
+        </div>
+        <div class="form-group">
+            <label for="countries">Countries<sup>*</sup></label>
+            <select class="form-control input-sm" name="countries" data-rules="required"> 
+                <option value="">--</option> 
+                <option value="USA">USA</option> 
+                <option value="Canada">Canada</option> 
+                <option value="Japan">Japan</option> 
+                <option value="Mexico">Mexico</option>                                     
+            </select>    
+        </div>
+        <div class="form-group">
+            <h5>What's your preference?</h5>
+            <div class="checkbox">
+                <label>
+                    <input data-rules="required" type="checkbox" name="preference" value="option one">
+                     This is checkbox option one
+                </label>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input data-rules="required" type="checkbox" name="preference" value="option two"> 
+                    Option two and you can select more than one
+                </label>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input data-rules="required" type="checkbox" name="preference" value="option three"> 
+                    Option three for checkbox
+                </label>
+            </div>
+        </div>
+        <div class="form-group">
+            <h5>Yes or No?</h5>
+            <div class="radio">
+                <label>
+                    <input type="radio" name="yesno" value="yes">
+                    Yes
+                </label>
+            </div>
+            <div class="radio">
+                <label>
+                    <input type="radio" name="yesno" value="no"> 
+                    No
+                </label>
+            </div>        
+        </div>
+        <div class="form-group">
+            <h5>What's your comment</h5>
+            <textarea name="comment" class="form-control"></textarea>
+        </div>
+        <div class="form-group">
+                <h5>Attachment</h5>
+                <input type="file" class="form-control" name="attachment">
+            </div>
+        <a class="btn btn-submit btn-success">Submit</a>           
+</div>
+ 
+<script>
+    $(document).ready(function() {
+        var spForm = SpForms('#form1');
+        spForm.run();
+    });
+</script>

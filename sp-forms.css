@@ -1,0 +1,91 @@
+[data-list-name]{
+	min-height: 100px; 
+    overflow: hidden;
+    clear: both;
+}
+[data-list-name] input[type="file"] {
+    border:none;
+    box-shadow:none;
+    padding-left: 0;
+    padding-right: 0;
+}
+[data-list-name].loading{
+    background:url('spinner.gif') no-repeat center center #fff;    
+}
+[data-list-name] .error-msg, 
+[data-list-name] .success-message {
+	background: #f9d3d3;
+    margin-bottom: 12px;
+    padding: 10px 12px;
+    border: 1px solid #dfabab;
+    border-radius: 4px;
+	font-size: 12px;
+    font-style: italic;
+    color: #5f5f5f;
+    margin-bottom: 20px;
+    margin-top: 5px;
+}
+[data-list-name] .success-message {
+    background: #dff8e6;
+    border: 1px solid #b9eac6;
+}
+
+
+[data-list-name] .error {
+    color: #ef0000;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 12px;
+}
+[data-list-name] .btn-submit { 
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+    padding: 7px 10px;
+    clear: both;
+    display: block;
+    width: 72px;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 5px;     
+}
+
+[data-list-name] .btn-submit:hover {
+    color: #fff;
+    background-color: #449d44;
+    border-color: #398439;
+    text-decoration: none;
+    cursor: pointer;
+}
+[data-list-name] h5 {
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+
+::-webkit-input-placeholder {
+    color: #ccc !important;
+    font-size: 12px !important;        
+ } 
+:-moz-placeholder { /* Firefox 18- */
+     color: #ccc !important;
+     font-size: 12px !important;         
+}
+::-moz-placeholder {
+    color: #ccc !important;
+    font-size: 12px !important;        
+ }
+ 
+:-ms-input-placeholder {  
+    color: #ccc !important;
+    font-size: 12px !important;        
+ }
+ 
+input:focus::-webkit-input-placeholder { color:transparent !important; }
+input:focus:-moz-placeholder { color:transparent  !important; } /* FF 4-18 */
+input:focus::-moz-placeholder { color:transparent  !important; } /* FF 19+ */
+input:focus:-ms-input-placeholder { color:transparent  !important; } /* IE 10+ */
+
+.btn-submit {
+    color:#fff !important;
+    clear:both;
+}
