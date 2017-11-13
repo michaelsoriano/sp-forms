@@ -35,7 +35,7 @@ var SpForms = function(formId) {
         removeLoading();
         $(allFieldsString).attr('disabled','disabled');
         $(formId + ' .btn-submit').remove();
-        $(formId + ' .success-message').removeClass('hidden');
+        $(formId + ' .success-message').show();
     }
 
     function getFileBuffer(file) { //for file upload
@@ -329,6 +329,7 @@ var SpForms = function(formId) {
     function run() {
 
         var urlParams = new URLSearchParams(window.location.search);
+        
         if(urlParams.has(formIdNoHash)){
             var recordId = urlParams.get(formIdNoHash);
             getRecordById(recordId).done(function(item){
@@ -341,8 +342,12 @@ var SpForms = function(formId) {
                 showError(parseAjaxError(err));
             });
             
-            return false;        
+            return false;        //exit out if record is found 
         }       
+
+        //adds href to add another button in success
+        var locNoParams = location.protocol + '//' + location.host + location.pathname; 
+        $(formId + ' #addAnother').attr('href', locNoParams);
 
         //bind submit button
         var btn = $form.find('.btn-submit');
@@ -385,4 +390,3 @@ var SpForms = function(formId) {
         run: run         
     }
   }
-  

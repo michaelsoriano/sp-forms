@@ -63,20 +63,19 @@
 
 
 ::-webkit-input-placeholder {
-    color: #ccc !important;
+    color: #ababab !important;
     font-size: 12px !important;        
  } 
 :-moz-placeholder { /* Firefox 18- */
-     color: #ccc !important;
+     color: #ababab !important;
      font-size: 12px !important;         
 }
 ::-moz-placeholder {
-    color: #ccc !important;
+    color: #ababab !important;
     font-size: 12px !important;        
  }
- 
 :-ms-input-placeholder {  
-    color: #ccc !important;
+    color: #ababab!important;
     font-size: 12px !important;        
  }
  
