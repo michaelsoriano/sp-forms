@@ -2,6 +2,8 @@
 
 A jQuery plugin that will allow you to create custom HTML forms for SharePoint. The plugin is designed to work with HTML. All configuration / setup is done via HTML. 
 
+Note that the demo HTML contains jQuery.js (required) and Bootstrap.css (optional)
+
 ![alt tag](http://michaelsoriano.com/wp-content/uploads/2017/11/submit.gif)
 
 More information on this Post: [**Create Custom HTML Forms for SharePoint with this jQuery Plugin**](http://michaelsoriano.com/sharepoint-forms-custom-html/).
