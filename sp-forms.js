@@ -322,16 +322,24 @@ var SpForms = function(formId) {
     
     } //END uploadFile
   
+    function urlParam (name){
+        var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+        if (results==null){
+           return null;
+        }
+        else{
+           return decodeURI(results[1]) || 0;
+        }
+    }
+
     /************END PRIVATE***************/      
       
     /**********PUBLIC METHODS**************/
 
     function run() {
 
-        var urlParams = new URLSearchParams(window.location.search);
-        
-        if(urlParams.has(formIdNoHash)){
-            var recordId = urlParams.get(formIdNoHash);
+        if(urlParam(formIdNoHash)){
+            var recordId = urlParam(formIdNoHash);
             getRecordById(recordId).done(function(item){
                 if(item.d.results.length > 0){
                     showRecord(item.d.results);
