@@ -1,6 +1,6 @@
 # sp-forms
 
-A jQuery plugin that will allow you to create custom HTML forms for SharePoint. The plugin is designed to work with HTML. All configuration / setup is done via HTML. 
+A jQuery plugin that will allow you to create custom HTML forms for SharePoint. The plugin is designed to work with HTML. All configuration / setup is done via HTML. No scripting required.
 
 Note that the demo HTML contains jQuery.js (required) and Bootstrap.css (optional)
 
