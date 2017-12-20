@@ -366,6 +366,7 @@ var SpForms = function(formId) {
                     var listType = data1.d.ListItemEntityTypeFullName;
                     var ajax = insertData(null,listType, listName); 
                     ajax.done(function(success){  
+                        if($(selectorString + ' [name="attachment"]').length > 0){
                         if($(selectorString + ' [name="attachment"]')[0].files[0] 
                             && success.d.ID){ //IF THERE IS A FILE && HAS ID
                             var file =  $(selectorString + ' [name="attachment"]')[0].files[0];
@@ -379,6 +380,7 @@ var SpForms = function(formId) {
                             })
                             return;
                         }
+                        }                        
                         setTimeout(function(){
                             updateUrl(success.d.ID);
                             showSuccess();
